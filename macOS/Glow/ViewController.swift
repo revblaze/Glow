@@ -16,6 +16,11 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     @IBOutlet var navConstraint: NSLayoutConstraint!
     @IBOutlet var sideConstraint: NSLayoutConstraint!
     
+    // Side Menu Buttons
+    @IBOutlet var refreshButton: NSButton!
+    @IBOutlet var bookmarkButton: NSButton!
+    @IBOutlet var homeButton: NSButton!
+    
     var searchRequest = ""
     
     override func viewDidLoad() {
