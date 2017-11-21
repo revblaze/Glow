@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import Fabric
+import Crashlytics
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         mainWindow = NSApplication.shared.windows[0]
+        Fabric.with([Crashlytics.self])
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

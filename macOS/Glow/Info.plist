@@ -22,6 +22,20 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>10</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>4728a63806c2558546cfb50e1bf445fc0ed3b712</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>

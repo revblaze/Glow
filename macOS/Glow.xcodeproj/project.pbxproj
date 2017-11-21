@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D289A061FC4CCE80031799D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D289A041FC4CCE70031799D /* Fabric.framework */; };
+		4D289A071FC4CCE80031799D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D289A051FC4CCE80031799D /* Crashlytics.framework */; };
 		4D8378681FC34485002E9CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8378671FC34485002E9CE1 /* AppDelegate.swift */; };
 		4D83786A1FC34485002E9CE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8378691FC34485002E9CE1 /* ViewController.swift */; };
 		4D83786C1FC34485002E9CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D83786B1FC34485002E9CE1 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D289A041FC4CCE70031799D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		4D289A051FC4CCE80031799D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		4D8378641FC34485002E9CE1 /* Glow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8378671FC34485002E9CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D8378691FC34485002E9CE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D289A071FC4CCE80031799D /* Crashlytics.framework in Frameworks */,
+				4D289A061FC4CCE80031799D /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				4D83787C1FC3501C002E9CE1 /* OpenSans-Regular.ttf */,
+				4D289A051FC4CCE80031799D /* Crashlytics.framework */,
+				4D289A041FC4CCE70031799D /* Fabric.framework */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 				4D8378601FC34485002E9CE1 /* Sources */,
 				4D8378611FC34485002E9CE1 /* Frameworks */,
 				4D8378621FC34485002E9CE1 /* Resources */,
+				4D289A031FC4CCC20031799D /* Fabric Framework */,
 			);
 			buildRules = (
 			);
@@ -113,6 +122,11 @@
 					4D8378631FC34485002E9CE1 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -146,6 +160,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D289A031FC4CCC20031799D /* Fabric Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Fabric Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 4728a63806c2558546cfb50e1bf445fc0ed3b712 c2706f40d7d403a1129f810e7a08b5385a4fb2369653a0f61c996151fad10373";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D8378601FC34485002E9CE1 /* Sources */ = {
@@ -283,13 +314,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Glow/Glow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Glow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.devsec.Glow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glowbrowser.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -299,13 +335,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Glow/Glow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Glow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.devsec.Glow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glowbrowser.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
