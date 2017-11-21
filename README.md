@@ -1,5 +1,5 @@
 # Glow
-Light-weight web browser based on Opera' Neon Browser
+A light-weight web browser based on Opera's Neon browser.
 
 <img src="Cover.jpg" width="860" />
 
