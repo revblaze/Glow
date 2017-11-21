@@ -28,6 +28,9 @@ The Glow web browser was built from the ground up for durability and speed. The 
 - [x] URLSearchBar
     - [x] URL-Search Detection
     - [x] Loading Search & URL
+- [ ] Tabs & New Windows
+	- [ ] Tab Management
+	- [ ] New Window Management
 - [ ] Bookmarks
     - [ ] Adding Bookmarks
     - [ ] Listing Bookmarks
