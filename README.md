@@ -1,5 +1,5 @@
 # Glow
-A light-weight web browser – built for speed, performance and above all, beauty.
+A light-weight web browser built for speed, performance and above all, beauty.
 
 <img src="Cover.png" width="860" />
 
