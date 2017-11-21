@@ -708,21 +708,21 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Glow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView blendingMode="behindWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Agz-T0-jSE">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-YZ-QvM">
-                                        <rect key="frame" x="40" y="0.0" width="440" height="230"/>
+                                        <rect key="frame" x="40" y="0.0" width="560" height="560"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iL8-o0-h59">
-                                        <rect key="frame" x="63" y="237" width="394" height="22"/>
+                                        <rect key="frame" x="63" y="567" width="514" height="22"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" state="on" focusRingType="none" alignment="center" placeholderString="Search or type URL" usesSingleLineMode="YES" id="X8s-wg-EUH">
                                             <font key="font" size="15" name="OpenSans"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -732,16 +732,58 @@
                                             </connections>
                                         </textFieldCell>
                                     </textField>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="fnc-rg-kno">
+                                        <rect key="frame" x="4" y="488" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="X6J-S4-q3H"/>
+                                            <constraint firstAttribute="height" constant="32" id="jOs-tD-X2j"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Refresh" imagePosition="only" alignment="center" state="on" imageScaling="axesIndependently" inset="2" id="wc0-Gs-nuT">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="uBG-bA-Ot6">
+                                        <rect key="frame" x="4" y="436" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="MAj-tE-FLW"/>
+                                            <constraint firstAttribute="height" constant="32" id="pdK-dY-DrF"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Star" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="rQO-uj-2aZ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="WNC-rf-GPh">
+                                        <rect key="frame" x="4" y="384" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="DkI-J1-6uL"/>
+                                            <constraint firstAttribute="width" constant="32" id="y56-FZ-gV7"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Home" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pTd-SW-SCE">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="iL8-o0-h59" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" constant="11" id="40B-xi-9zp"/>
+                                    <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="fnc-rg-kno" secondAttribute="trailing" constant="4" id="97m-lw-Hfb"/>
+                                    <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="uBG-bA-Ot6" secondAttribute="trailing" constant="4" id="9NC-Gt-Ss1"/>
+                                    <constraint firstItem="fnc-rg-kno" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="4" id="AMh-dc-Kmz"/>
+                                    <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="WNC-rf-GPh" secondAttribute="trailing" constant="4" id="GaP-Kf-QuD"/>
+                                    <constraint firstItem="WNC-rf-GPh" firstAttribute="top" secondItem="uBG-bA-Ot6" secondAttribute="bottom" constant="20" id="Gbl-IT-gZU"/>
+                                    <constraint firstItem="uBG-bA-Ot6" firstAttribute="top" secondItem="fnc-rg-kno" secondAttribute="bottom" constant="20" id="HXG-Yd-hlo"/>
                                     <constraint firstItem="iL8-o0-h59" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="65" id="Nff-Ak-jkI"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="top" secondItem="iL8-o0-h59" secondAttribute="bottom" constant="7" id="VHu-Uj-jMN"/>
+                                    <constraint firstItem="WNC-rf-GPh" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="4" id="VfF-I8-T9w"/>
                                     <constraint firstAttribute="bottom" secondItem="Do4-YZ-QvM" secondAttribute="bottom" id="Xet-FW-1in"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" constant="40" id="fyY-EH-2M9"/>
                                     <constraint firstAttribute="trailing" secondItem="iL8-o0-h59" secondAttribute="trailing" constant="25" id="mEU-2R-PUZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Do4-YZ-QvM" secondAttribute="trailing" id="ns2-di-gA4"/>
+                                    <constraint firstItem="uBG-bA-Ot6" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="4" id="vWr-bZ-8b5"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="40" id="xvQ-P2-AYK"/>
+                                    <constraint firstItem="fnc-rg-kno" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" constant="80" id="yj7-Zf-Q9h"/>
                                 </constraints>
                             </visualEffectView>
                         </subviews>
@@ -761,7 +803,12 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="255"/>
+            <point key="canvasLocation" x="75" y="404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Home" width="128" height="128"/>
+        <image name="Refresh" width="64" height="64"/>
+        <image name="Star" width="64" height="64"/>
+    </resources>
 </document>
