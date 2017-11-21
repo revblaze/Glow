@@ -796,7 +796,10 @@
                     </view>
                     <connections>
                         <outlet property="addressBar" destination="iL8-o0-h59" id="1bi-lK-ieh"/>
+                        <outlet property="bookmarkButton" destination="uBG-bA-Ot6" id="Xon-7T-V7b"/>
+                        <outlet property="homeButton" destination="WNC-rf-GPh" id="qpJ-Sj-jug"/>
                         <outlet property="navConstraint" destination="fyY-EH-2M9" id="nia-Kg-J0X"/>
+                        <outlet property="refreshButton" destination="fnc-rg-kno" id="puV-ad-Ub2"/>
                         <outlet property="sideConstraint" destination="xvQ-P2-AYK" id="K9h-3I-Fvx"/>
                         <outlet property="webView" destination="Do4-YZ-QvM" id="fsX-Gj-xPI"/>
                     </connections>
@@ -807,7 +810,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Home" width="128" height="128"/>
+        <image name="Home" width="64" height="64"/>
         <image name="Refresh" width="64" height="64"/>
         <image name="Star" width="64" height="64"/>
     </resources>
