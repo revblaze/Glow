@@ -11,7 +11,7 @@
         <scene sceneID="JPo-4y-FX3">
             <objects>
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
-                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6" customClass="MenuController" customModule="Glow" customModuleProvider="target">
                         <items>
                             <menuItem title="Glow" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -605,11 +605,10 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Show Side Menu" id="YGs-he-nDP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                        <menuItem title="Hide Side Menu" id="MZQ-7Y-dvf">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Toggle Side Menu" keyEquivalent="T" id="YGs-he-nDP">
+                                            <connections>
+                                                <action selector="showSideMenu:" target="AYu-sK-qS6" id="v8l-m6-nNx"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="lzM-YR-BID"/>
                                         <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
@@ -778,6 +777,18 @@
                                     <progressIndicator wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-E3-2SD">
                                         <rect key="frame" x="-5" y="-9" width="610" height="20"/>
                                     </progressIndicator>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kHc-CP-YBf">
+                                        <rect key="frame" x="-2" y="560" width="224" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="aYb-Wi-d1A"/>
+                                            <constraint firstAttribute="height" constant="40" id="m9h-pd-Ity"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rgh-th-xmU">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="iL8-o0-h59" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" constant="11" id="40B-xi-9zp"/>
@@ -786,8 +797,10 @@
                                     <constraint firstItem="fnc-rg-kno" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="4" id="AMh-dc-Kmz"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="WNC-rf-GPh" secondAttribute="trailing" constant="4" id="GaP-Kf-QuD"/>
                                     <constraint firstItem="WNC-rf-GPh" firstAttribute="top" secondItem="uBG-bA-Ot6" secondAttribute="bottom" constant="20" id="Gbl-IT-gZU"/>
+                                    <constraint firstItem="kHc-CP-YBf" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" id="HGV-qL-X8W"/>
                                     <constraint firstItem="uBG-bA-Ot6" firstAttribute="top" secondItem="fnc-rg-kno" secondAttribute="bottom" constant="20" id="HXG-Yd-hlo"/>
                                     <constraint firstAttribute="trailing" secondItem="xr2-E3-2SD" secondAttribute="trailing" constant="-5" id="KFc-K3-bEK"/>
+                                    <constraint firstItem="kHc-CP-YBf" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" id="NFW-jf-qcR"/>
                                     <constraint firstItem="iL8-o0-h59" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="165" id="Nff-Ak-jkI"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="top" secondItem="iL8-o0-h59" secondAttribute="bottom" constant="7" id="VHu-Uj-jMN"/>
                                     <constraint firstAttribute="bottom" secondItem="xr2-E3-2SD" secondAttribute="bottom" constant="-8" id="VLO-83-V5V"/>
@@ -814,6 +827,7 @@
                         <outlet property="addressBar" destination="iL8-o0-h59" id="1bi-lK-ieh"/>
                         <outlet property="bookmarkButton" destination="uBG-bA-Ot6" id="Xon-7T-V7b"/>
                         <outlet property="homeButton" destination="WNC-rf-GPh" id="qpJ-Sj-jug"/>
+                        <outlet property="moveFullScreen" destination="rgh-th-xmU" id="jjP-8t-lC6"/>
                         <outlet property="navConstraint" destination="fyY-EH-2M9" id="nia-Kg-J0X"/>
                         <outlet property="progressBar" destination="xr2-E3-2SD" id="Iyp-0L-nF8"/>
                         <outlet property="refreshButton" destination="fnc-rg-kno" id="puV-ad-Ub2"/>

@@ -13,6 +13,7 @@
 		4D83786F1FC34485002E9CE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D83786D1FC34485002E9CE1 /* Main.storyboard */; };
 		4D8378791FC34592002E9CE1 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8378771FC34592002E9CE1 /* WindowController.swift */; };
 		4D83787D1FC3501C002E9CE1 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D83787C1FC3501C002E9CE1 /* OpenSans-Regular.ttf */; };
+		4DFF6F4F1FC49AE300B3CE32 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6F4E1FC49AE300B3CE32 /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4D8378711FC34485002E9CE1 /* Glow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glow.entitlements; sourceTree = "<group>"; };
 		4D8378771FC34592002E9CE1 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4D83787C1FC3501C002E9CE1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		4DFF6F4E1FC49AE300B3CE32 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4D8378671FC34485002E9CE1 /* AppDelegate.swift */,
 				4D8378691FC34485002E9CE1 /* ViewController.swift */,
 				4D8378771FC34592002E9CE1 /* WindowController.swift */,
+				4DFF6F4E1FC49AE300B3CE32 /* MenuController.swift */,
 				4D83786B1FC34485002E9CE1 /* Assets.xcassets */,
 				4D83786D1FC34485002E9CE1 /* Main.storyboard */,
 				4D8378701FC34485002E9CE1 /* Info.plist */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFF6F4F1FC49AE300B3CE32 /* MenuController.swift in Sources */,
 				4D83786A1FC34485002E9CE1 /* ViewController.swift in Sources */,
 				4D8378791FC34592002E9CE1 /* WindowController.swift in Sources */,
 				4D8378681FC34485002E9CE1 /* AppDelegate.swift in Sources */,

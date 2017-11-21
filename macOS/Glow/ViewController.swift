@@ -14,6 +14,7 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     // Main View Elements
     @IBOutlet var webView: WKWebView!
     @IBOutlet var addressBar: NSTextField!
+    @IBOutlet var moveFullScreen: NSTextFieldCell!
     @IBOutlet var progressBar: NSProgressIndicator!
     @IBOutlet var navConstraint: NSLayoutConstraint!
     @IBOutlet var sideConstraint: NSLayoutConstraint!
@@ -29,6 +30,8 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.activeAddressBarNotification(_:)), name: NSNotification.Name(rawValue: "ActiveAddressBar"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.toggleSideMenuNotification(_:)), name: NSNotification.Name(rawValue: "ToggleSideMenu"), object: nil)
+        
         
         let gradient = CAGradientLayer()
         
@@ -47,9 +50,7 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
         progressBar.layer?.backgroundColor = CGColor.clear
         progressBar.layer?.compositingFilter = gradient
         progressBar.wantsLayer = true
-        
         progressBar.isBezeled = false
-        
         addressBar.resignFirstResponder()
         
     }
@@ -204,10 +205,39 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     }
     
     @objc func activeAddressBarNotification(_ aNotification: Notification) {
-        print("Being Called?")
-        print((webView.url?.absoluteString)!)
         addressBar.stringValue = (webView.url?.absoluteString)!
-        print(addressBar.stringValue)
+    }
+    
+    @objc func toggleSideMenuNotification(_ aNotification: Notification) {
+        let customTimeFunction = CAMediaTimingFunction(controlPoints: 5/6, 0.2, 2/6, 0.9)
+        if addressBar.isHidden {
+            /*
+                addressBar.isHidden = false
+                navConstraint.constant = 40.0
+                sideConstraint.constant = 40.0
+ */
+            
+            NSAnimationContext.runAnimationGroup({(_ context: NSAnimationContext) -> Void in
+                //context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+                context.timingFunction = customTimeFunction
+                context.duration = 0.3
+                navConstraint.animator().constant = 40.0
+                sideConstraint.animator().constant = 40.0
+                addressBar.animator().isHidden = false
+            }, completionHandler: {() -> Void in
+            })
+            
+        } else {
+            NSAnimationContext.runAnimationGroup({(_ context: NSAnimationContext) -> Void in
+                //context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+                context.timingFunction = customTimeFunction
+                context.duration = 0.3
+                navConstraint.animator().constant = 0.0
+                sideConstraint.animator().constant = 0.0
+                addressBar.animator().isHidden = true
+            }, completionHandler: {() -> Void in
+            })
+        }
     }
     
     // AddressBar: User Began Editing AddressBar
@@ -234,16 +264,30 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     
     // Window Action: FullScreen
     public func updateForFullScreenMode() {
-        addressBar.isHidden = true
-        navConstraint.constant = 0.0
-        sideConstraint.constant = 0.0
+        let customTimeFunction = CAMediaTimingFunction(controlPoints: 5/6, 0.2, 2/6, 0.9)
+        NSAnimationContext.runAnimationGroup({(_ context: NSAnimationContext) -> Void in
+            //context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            context.timingFunction = customTimeFunction
+            context.duration = 0.3
+            navConstraint.animator().constant = 0.0
+            sideConstraint.animator().constant = 0.0
+            addressBar.animator().isHidden = true
+        }, completionHandler: {() -> Void in
+        })
     }
     
     // Window Action: Window
     public func updateForWindowMode() {
-        addressBar.isHidden = false
-        navConstraint.constant = 40.0
-        sideConstraint.constant = 40.0
+        let customTimeFunction = CAMediaTimingFunction(controlPoints: 5/6, 0.2, 2/6, 0.9)
+        NSAnimationContext.runAnimationGroup({(_ context: NSAnimationContext) -> Void in
+            //context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            context.timingFunction = customTimeFunction
+            context.duration = 0.3
+            navConstraint.animator().constant = 40.0
+            sideConstraint.animator().constant = 40.0
+            addressBar.animator().isHidden = false
+        }, completionHandler: {() -> Void in
+        })
     }
     
     override var representedObject: Any? {
