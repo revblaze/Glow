@@ -775,7 +775,7 @@
                                         </buttonCell>
                                     </button>
                                     <progressIndicator wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-E3-2SD">
-                                        <rect key="frame" x="-5" y="-9" width="610" height="20"/>
+                                        <rect key="frame" x="-10" y="-9" width="620" height="20"/>
                                     </progressIndicator>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kHc-CP-YBf">
                                         <rect key="frame" x="-2" y="560" width="224" height="40"/>
@@ -799,7 +799,7 @@
                                     <constraint firstItem="WNC-rf-GPh" firstAttribute="top" secondItem="uBG-bA-Ot6" secondAttribute="bottom" constant="20" id="Gbl-IT-gZU"/>
                                     <constraint firstItem="kHc-CP-YBf" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" id="HGV-qL-X8W"/>
                                     <constraint firstItem="uBG-bA-Ot6" firstAttribute="top" secondItem="fnc-rg-kno" secondAttribute="bottom" constant="20" id="HXG-Yd-hlo"/>
-                                    <constraint firstAttribute="trailing" secondItem="xr2-E3-2SD" secondAttribute="trailing" constant="-5" id="KFc-K3-bEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="xr2-E3-2SD" secondAttribute="trailing" constant="-10" id="KFc-K3-bEK"/>
                                     <constraint firstItem="kHc-CP-YBf" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" id="NFW-jf-qcR"/>
                                     <constraint firstItem="iL8-o0-h59" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="165" id="Nff-Ak-jkI"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="top" secondItem="iL8-o0-h59" secondAttribute="bottom" constant="7" id="VHu-Uj-jMN"/>
@@ -808,7 +808,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Do4-YZ-QvM" secondAttribute="bottom" id="Xet-FW-1in"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="top" secondItem="Agz-T0-jSE" secondAttribute="top" constant="40" id="fyY-EH-2M9"/>
                                     <constraint firstAttribute="trailing" secondItem="iL8-o0-h59" secondAttribute="trailing" constant="125" id="mEU-2R-PUZ"/>
-                                    <constraint firstItem="xr2-E3-2SD" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="-5" id="mi9-Dr-zEA"/>
+                                    <constraint firstItem="xr2-E3-2SD" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="-10" id="mi9-Dr-zEA"/>
                                     <constraint firstAttribute="trailing" secondItem="Do4-YZ-QvM" secondAttribute="trailing" id="ns2-di-gA4"/>
                                     <constraint firstItem="uBG-bA-Ot6" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="4" id="vWr-bZ-8b5"/>
                                     <constraint firstItem="Do4-YZ-QvM" firstAttribute="leading" secondItem="Agz-T0-jSE" secondAttribute="leading" constant="40" id="xvQ-P2-AYK"/>

@@ -46,11 +46,11 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
         //view.layer.mask = gradient
         progressBar.layer?.mask = gradient
         //progressBar.controlTint = gradient
-        progressBar.layer?.borderColor = CGColor.clear
-        progressBar.layer?.backgroundColor = CGColor.clear
-        progressBar.layer?.compositingFilter = gradient
+        //progressBar.layer?.borderColor = CGColor.clear
+        //progressBar.layer?.backgroundColor = CGColor.clear
+        //progressBar.layer?.compositingFilter = gradient
         progressBar.wantsLayer = true
-        progressBar.isBezeled = false
+        //progressBar.isBezeled = false
         addressBar.resignFirstResponder()
         
     }
@@ -249,7 +249,6 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     override func controlTextDidEndEditing(_ aNotification: Notification) {
         if !addressBar.stringValue.isEmptyOrSpaces() {
             loadRequest(input: addressBar.stringValue)
-            print(addressBar.stringValue)
             deselectAdressBar()
         }
     }
