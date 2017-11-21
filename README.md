@@ -1,30 +1,30 @@
 # Glow
-A light-weight web browser based on Opera's Neon browser.
+A light-weight web browser – built for speed, performance and above all, beauty.
 
 <img src="Cover.png" width="860" />
 
-<b>Glow</b> is an open source, leight-weight web browser for the iOS and macOS platforms. Based on the Opera Neon browser.
+<b>Glow</b> is an open source, leight-weight web browser for the iOS and macOS platforms. Based on the Opera Neon browser. Currently in heavy development.
 
 ## Goals
-The Glow web browser was built from the ground up for durability, and above all, speed. The end goal is to create a beautiful product, written in Swift.
+The Glow web browser was built from the ground up for durability and speed. The end goal is to create a beautiful product written in Swift.
 
 ### Fundamental Goals
 - Joint URL-Search Bar
 - Basic Web Browser Functionality
-- Bookmarks & History
-- Optimized for Speed Loading
+- Speedy Navigation & Browser Control
+- Bookmarks, History & Downloads
+- Optimized for Page Loading Speed
+- A Different Take on Modern Day Web Browsers
 
 ## Completed
-- [ ] UI Foundation
+- [x] UI Foundation
     - [x] URLSearchBar
     - [x] WKWebView
     - [x] Back & Forward
     - [x] Gesture Navigation
     - [x] Stop & Refresh
-    - [x] Custom Homepage
-    - [x] Network Detection
-    - [x] WebView Source Code
-    - [ ] Menu Item Functionality
+    - [x] UI Animations
+    - [x] Toggle Side Menu
 - [x] URLSearchBar
     - [x] URL-Search Detection
     - [x] Loading Search & URL
@@ -32,6 +32,33 @@ The Glow web browser was built from the ground up for durability, and above all,
     - [ ] Adding Bookmarks
     - [ ] Listing Bookmarks
     - [ ] Loading Bookmarks
+- [ ] History
+	- [ ] Save URL History
+	- [ ] Listing Page History
+	- [ ] Loading Page History
+- [ ] Downloads
+	- [ ] Implement File Downloading
+	- [ ] Listing Downloads
+	- [ ] Go to Downloads in Finder
+- [ ] Side Menu
+	- [x] Refresh Button
+	- [ ] Bookmarks Button
+	- [ ] Home Button
+	- [ ] Share Button
+	- [ ] History Button
+	- [ ] Downloads Button
+	- [ ] Print Button
+	- [ ] Source Code Button
+	- [ ] Settings Button (Bottom)
+- [ ] Settings
+	- [ ] Custom Home URL
+	- [ ] Custom UserAgent
+	- [ ] Customize Side Bar
+	- [ ] Return to Defaults Button
+- [ ] Miscellaneous
+	- [ ] Gradient Progress Bar
+	- [ ] Website Favicon
+	- [ ] Network Detection
 
 ## Known Errors
 None as of yet.
