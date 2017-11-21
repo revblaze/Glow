@@ -3,10 +3,12 @@
 //  Glow
 //
 //  Created by Justin Bush on 2017-11-20.
-//  Copyright © 2017 Justin Bush. All rights reserved.
+//  Copyright © 2018 Justin Bush. All rights reserved.
 //
 
 import Cocoa
+import Fabric
+import Crashlytics
 
 class WindowController: NSWindowController, NSWindowDelegate {
     
@@ -30,6 +32,10 @@ class WindowController: NSWindowController, NSWindowDelegate {
         if let controller = contentViewController as? ViewController {
             controller.updateForFullScreenMode()
         }
+        Answers.logContentView(withName: "FullScreen Mode",
+                               contentType: "Function",
+                               contentId: "function-3",
+                               customAttributes: [:])
     }
     
     // Window Action: Window
@@ -37,6 +43,10 @@ class WindowController: NSWindowController, NSWindowDelegate {
         if let controller = contentViewController as? ViewController {
             controller.updateForWindowMode()
         }
+        Answers.logContentView(withName: "Window Mode",
+                               contentType: "Function",
+                               contentId: "function-4",
+                               customAttributes: [:])
     }
     
 }

@@ -3,7 +3,7 @@
 //  Glow
 //
 //  Created by Justin Bush on 2017-11-20.
-//  Copyright © 2017 Justin Bush. All rights reserved.
+//  Copyright © 2018 Justin Bush. All rights reserved.
 //
 
 import Cocoa

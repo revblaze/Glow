@@ -3,11 +3,13 @@
 //  Glow
 //
 //  Created by Justin Bush on 2017-11-20.
-//  Copyright © 2017 Justin Bush. All rights reserved.
+//  Copyright © 2018 Justin Bush. All rights reserved.
 //
 
 import Cocoa
 import WebKit
+import Fabric
+import Crashlytics
 
 class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTextFieldDelegate, NSTextDelegate {
     
@@ -105,6 +107,11 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
         webView.setValue(false, forKey: "drawsBackground")
         webView.enclosingScrollView?.backgroundColor = NSColor.clear
         
+        Answers.logContentView(withName: "ViewController",
+                               contentType: "Load View",
+                               contentId: "loadview-1",
+                               customAttributes: [:])
+        
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
@@ -125,6 +132,18 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
         deselectAdressBar()
         
         webView.becomeFirstResponder()
+        
+        Answers.logContentView(withName: "Loaded Web Page",
+                               contentType: "Load WebView",
+                               contentId: "webview-1",
+                               customAttributes: [:])
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        Answers.logContentView(withName: "Failed to Load Web Page",
+                               contentType: "Load WebView",
+                               contentId: "webview-2",
+                               customAttributes: [:])
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
@@ -161,6 +180,10 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     
     @IBAction func refreshPage(_: Any?) {
         webView.reload()
+        Answers.logContentView(withName: "Refresh Page",
+                               contentType: "Function",
+                               contentId: "function-1",
+                               customAttributes: [:])
     }
     
     @IBAction func showSideMenu(_: Any?) {
@@ -238,6 +261,11 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
             }, completionHandler: {() -> Void in
             })
         }
+        
+        Answers.logContentView(withName: "Toggle Side Menu",
+                               contentType: "Function",
+                               contentId: "function-2",
+                               customAttributes: [:])
     }
     
     // AddressBar: User Began Editing AddressBar
