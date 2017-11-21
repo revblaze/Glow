@@ -1,7 +1,7 @@
 # Glow
 A light-weight web browser based on Opera's Neon browser.
 
-<img src="Cover.jpg" width="860" />
+<img src="Cover.png" width="860" />
 
 <b>Glow</b> is an open source, leight-weight web browser for the iOS and macOS platforms. Based on the Opera Neon browser.
 
