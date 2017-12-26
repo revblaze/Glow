@@ -188,19 +188,17 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     
     @IBAction func printPage(_: Any?) {
         let webPDF = webView.webFrame.frameView.documentView!
-        
         let sharedInfo = NSPrintInfo.shared
         let sharedDict = sharedInfo.dictionary()
         let printInfoDict = NSMutableDictionary(dictionary: sharedDict)
+        
         printInfoDict.setObject(NSPrintInfo.JobDisposition.spool, forKey: NSPrintInfo.AttributeKey.jobDisposition as NSCopying)
+        
         let printInfo = NSPrintInfo(dictionary: printInfoDict as! [NSPrintInfo.AttributeKey : Any])
-        // Set some preferences
-        /*
-        printInfo.horizontallyCentered = true
-        printInfo.verticallyCentered = false
+        printInfo.isHorizontallyCentered = true
+        printInfo.isVerticallyCentered = false
         printInfo.scalingFactor = 0.8
- */
-        // Print the custom text view
+        
         let op = NSPrintOperation(view: webPDF, printInfo: printInfo)
         op.run()
         
