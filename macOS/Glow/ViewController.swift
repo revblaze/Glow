@@ -186,6 +186,29 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
                                customAttributes: [:])
     }
     
+    @IBAction func printPage(_: Any?) {
+        
+        /*
+        let printInfo = NSPrintInfo.shared
+        //NSPrintOperation(view: webView.isMainFrame.frameView.documentView as? NSView ?? NSView(), printInfo: printInfo)
+        NSPrintOperation(view: webView, printInfo: printInfo)
+         */
+        //let printInfo = NSPrintInfo.shared.webFrame.webView
+        
+        /*
+        let printInfo = NSPrintInfo.shared
+        let printObject = NSMutableData()
+        let printOp = NSPrintOperation.pdfOperation(with: webView.webFrame.frameView.documentView, inside: webView.frame, to: printObject, printInfo: printInfo)
+        let printPan = NSPrintOperation.createContext(printOp)
+        //printOp.run()
+        //webView.printView(_: printOp)
+        let printDoc = webView.webFrame.frameView.documentView
+        printOp.runModal(for: <#T##NSWindow#>, delegate: <#T##Any?#>, didRun: <#T##Selector?#>, contextInfo: <#T##UnsafeMutableRawPointer?#>)
+ */
+ 
+        
+    }
+    
     @IBAction func showSideMenu(_: Any?) {
         addressBar.isHidden = false
         navConstraint.constant = 40.0
