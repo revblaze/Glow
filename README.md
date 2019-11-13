@@ -1,5 +1,5 @@
 # Glow
-A new take on the modern-day web browser.
+A new take on the modern-day web browser. <a href="https://glowbrowser.com">GlowBrowser.com</a>
 
 <img src="Cover.png" width="860" />
 
@@ -28,6 +28,9 @@ The Glow web browser was built from the ground up for durability and speed. The 
 - [x] URLSearchBar
     - [x] URL-Search Detection
     - [x] Loading Search & URL
+- [x] Accurate ProgressBar
+    - [x] 0.001ms Accuracy on Local Networks
+    - [x] 0.01ms Accuracy with Googles' Servers
 - [ ] Tabs & New Windows
 	- [ ] Tab Management
 	- [ ] New Window Management
@@ -71,11 +74,11 @@ None as of yet.
 
 ## Requirements
 Requires macOS 12.0 or later.
-<i>Please note that the app is being built with Swift 4.</i>
+<i>Please note that the app is being built with Swift 5.</i>
 
 ## MIT License
 
-Copyright © 2018 Justin Bush. All rights reserved.
+Copyright © 2020 Justin Bush. All rights reserved.
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy
