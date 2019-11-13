@@ -3,7 +3,7 @@ A new take on the modern-day web browser. <a href="https://glowbrowser.com">Glow
 
 <img src="Cover.png" width="860" />
 
-<b>Glow</b> is an open source, leight-weight web browser for the iOS and macOS platforms. Based on the Opera Neon browser. Currently in heavy development.
+<b>Glow</b> is an open source, leight-weight web browser for the iOS and macOS platforms. Inspired by the Opera Neon browser. Currently in heavy development (currently delayed due to school).
 
 ## Goals
 The Glow web browser was built from the ground up for durability and speed. The end goal is to create a beautiful product written in Swift.
@@ -49,7 +49,7 @@ The Glow web browser was built from the ground up for durability and speed. The 
 - [ ] Side Menu
 	- [x] Refresh Button
 	- [ ] Bookmarks Button
-	- [ ] Home Button
+	- [x] Home Button
 	- [ ] Share Button
 	- [ ] History Button
 	- [ ] Downloads Button
