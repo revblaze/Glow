@@ -306,12 +306,12 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTe
     }
     
     // AddressBar: User Began Editing AddressBar
-    override func controlTextDidBeginEditing(_ aNotification: Notification) {
+    func controlTextDidBeginEditing(_ aNotification: Notification) {
         //addressBar.stringValue = (webView.url?.absoluteString)!
     }
     
     // AddressBar: User Finished Editing AddressBar
-    override func controlTextDidEndEditing(_ aNotification: Notification) {
+    func controlTextDidEndEditing(_ aNotification: Notification) {
         if !addressBar.stringValue.isEmptyOrSpaces() {
             loadRequest(input: addressBar.stringValue)
             deselectAdressBar()
