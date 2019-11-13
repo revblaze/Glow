@@ -72,6 +72,9 @@ None as of yet.
 ## References
 None as of yet.
 
+## Notes
+May restrict to HTTPS protocal in near future.
+
 ## Requirements
 Requires macOS 12.0 or later.
 <i>Please note that the app is being built with Swift 5.</i>
